@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CyberVenom AI - Advanced Security Testing Toolkit for vulnerability scanning, port scanning, password checking, and AI code generation">
+    <meta name="keywords" content="cyber security, vulnerability scanner, port scanner, password checker, AI code generation, security testing">
+    <meta name="author" content="CyberVenom AI">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="CyberVenom AI - Security Testing Toolkit">
+    <meta property="og:description" content="Advanced security testing tools including vulnerability scanner, port scanner, and password checker">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-netlify-site-url">
+    <meta property="og:image" content="https://your-netlify-site-url/assets/cybervenom-logo.png">
+    <title>CyberVenom AI - Security Testing Toolkit</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CyberVenom AI</h1>
+            <p class="version">Version 1.0.0</p>
+        </header>
+
+        <nav>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="vulnerability">Vulnerability Scanner</button>
+                <button class="tab-btn" data-tab="port">Port Scanner</button>
+                <button class="tab-btn" data-tab="password">Password Checker</button>
+                <button class="tab-btn" data-tab="ai">AI Generator</button>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Vulnerability Scanner Tab -->
+            <section id="vulnerability" class="tab-content active">
+                <h2>Vulnerability Scanner</h2>
+                <div class="input-group">
+                    <label for="targetUrl">Target URL:</label>
+                    <input type="url" id="targetUrl" placeholder="https://example.com" required>
+                    <button onclick="scanVulnerabilities()">Scan</button>
+                </div>
+                <div class="results" id="vulnerabilityResults"></div>
+            </section>
+
+            <!-- Port Scanner Tab -->
+            <section id="port" class="tab-content">
+                <h2>Port Scanner</h2>
+                <div class="input-group">
+                    <label for="host">Host:</label>
+                    <input type="text" id="host" placeholder="example.com" required>
+                    <label for="ports">Ports:</label>
+                    <input type="text" id="ports" placeholder="80,443,8080" required>
+                    <button onclick="scanPorts()">Scan</button>
+                </div>
+                <div class="results" id="portResults"></div>
+            </section>
+
+            <!-- Password Checker Tab -->
+            <section id="password" class="tab-content">
+                <h2>Password Checker</h2>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required>
+                    <button onclick="checkPassword()">Check Strength</button>
+                </div>
+                <div class="results" id="passwordResults"></div>
+            </section>
+
+            <!-- AI Generator Tab -->
+            <section id="ai" class="tab-content">
+                <h2>AI Code Generator</h2>
+                <div class="input-group">
+                    <label for="aiPrompt">Prompt:</label>
+                    <textarea id="aiPrompt" placeholder="Write a secure password strength checker" required></textarea>
+                    <button onclick="generateCode()">Generate Code</button>
+                </div>
+                <div class="results" id="aiResults"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 CyberVenom AI. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" onclick="window.scrollTo(0, 0)">Back to Top</a>
+                <a href="https://github.com/yourusername/cybervenom-ai" target="_blank">GitHub</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
